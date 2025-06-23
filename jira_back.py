@@ -24,7 +24,7 @@ jira = JIRA(
 
 @app.get("/")
 def root():
-    return {"message": "🚀 Jira API is LIVE!"}
+    return {"message": " Jira API is LIVE!"}
 
 @app.post("/create-issue/")
 def create_issue(data: IssueCreate):
@@ -37,7 +37,7 @@ def create_issue(data: IssueCreate):
         }
         issue = jira.create_issue(fields=issue_dict)
         return {
-            "message": "✅ Issue created successfully",
+            "message": "Issue created successfully",
             "key": issue.key,
             "url": f"{JIRA_URL}/browse/{issue.key}"
         }
