@@ -24,7 +24,7 @@ jira = JIRA(
 
 @app.get("/")
 def root():
-    return {"message": " Jira API is LIVE!"}
+    return {"message": " Jira API is working fine"}
 
 @app.post("/create-issue/")
 def create_issue(data: IssueCreate):
